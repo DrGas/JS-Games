@@ -18,14 +18,53 @@ function userInput() {
 	//counting array within array, so the first [] is which array in general it is and second [] is which thing within this array is SO [0,0] is //Earth and [0][1] is answer which is 1, 
 	//then [1][0] is Saturn answer [1,1] = 31,
 	//Venus [2][0] answer [2][1] = 0
-	let number1 = parseInt(prompt(questions[0][0], '')); 
+	let number1 = parseInt(prompt(questions[0][0], ''));
+	
+	if (number1 === questions[0][1]) {
+		alert('Correct!');
+		
+	}
+	else 
+	{
+		alert('Your answer is incorrect. Earth have just '  + questions[0][1] + ' moon');
+	}
+	
+	
+	
 	let number2 = parseInt(prompt(questions[1][0], ''));
+	if (number2 === questions[1][1]) {
+		alert('Correct!');
+		
+	}
+	else 
+	{
+		alert('Your answer is incorrect. Saturn have ' + questions[1][1]  + ' moons!');
+	}
+	
+	
+	
 	let number3 = parseInt(prompt(questions[2][0], ''));
+	if (number3 === questions[2][1]) {
+		alert('Correct!');
+		
+	}
+	else 
+	{
+		alert('Your answer is incorrect. Venus have ' + questions[2][1] + ' moons!' );
+	}
+	
+	
+	
 	//this outputs a sting! 
-	let result = number1 + number2 + number3; //parsing string into int
+	//let result = number1 + answer1 + number2 + answer2 + number3; //parsing string into int
 	//the result into the output
-	output.innerHTML = 'Your result is ' + result + '!';
+	//output.innerHTML = 'Your result is ' + result + '!';
+	
+
+	
+	
 
 }
 userInput();
+
 

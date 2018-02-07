@@ -13,6 +13,11 @@ var questions = [
 		['How many moons does Venus have?', 0]	
 	];
 
+//var yourName = prompt('Please enter your name','')
+
+var message = document.getElementById('message');
+var score = 0;
+
 function userInput() {
 	'use strict'; 
 	//counting array within array, so the first [] is which array in general it is and second [] is which thing within this array is SO [0,0] is //Earth and [0][1] is answer which is 1, 
@@ -22,6 +27,7 @@ function userInput() {
 	
 	if (number1 === questions[0][1]) {
 		alert('Correct!');
+		score++;
 		
 	}
 	else 
@@ -34,11 +40,13 @@ function userInput() {
 	let number2 = parseInt(prompt(questions[1][0], ''));
 	if (number2 === questions[1][1]) {
 		alert('Correct!');
+		score++;
 		
 	}
 	else 
 	{
 		alert('Your answer is incorrect. Saturn have ' + questions[1][1]  + ' moons!');
+		
 	}
 	
 	
@@ -46,6 +54,7 @@ function userInput() {
 	let number3 = parseInt(prompt(questions[2][0], ''));
 	if (number3 === questions[2][1]) {
 		alert('Correct!');
+		score++;
 		
 	}
 	else 
@@ -54,17 +63,9 @@ function userInput() {
 	}
 	
 	
-	
-	//this outputs a sting! 
-	//let result = number1 + answer1 + number2 + answer2 + number3; //parsing string into int
-	//the result into the output
-	//output.innerHTML = 'Your result is ' + result + '!';
-	
-
-	
+	message.innerHTML = 'Your result is ' + score + ' correct! Out of: ' + questions.length;
 	
 
 }
 userInput();
-
 
